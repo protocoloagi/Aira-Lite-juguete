@@ -1,0 +1,13 @@
+{
+    "idiomas": {
+        "ar": { "modelo": "modelos_piper/ar.onnx", "velocidad": 1.0 },
+        "de": { "modelo": "modelos_piper/de.onnx", "velocidad": 1.0 },
+        "en": { "modelo": "modelos_piper/en.onnx", "velocidad": 1.0 },
+        "es": { "modelo": "modelos_piper/es.onnx", "velocidad": 1.0 },
+        "fr": { "modelo": "modelos_piper/fr.onnx", "velocidad": 1.0 },
+        "hi": { "modelo": "modelos_piper/hi.onnx", "velocidad": 1.0 },
+        "pt": { "modelo": "modelos_piper/pt.onnx", "velocidad": 1.0 },
+        "zh": { "modelo": "modelos_piper/zh.onnx", "velocidad": 1.0 }
+    },
+    "por_defecto": "es"
+}
