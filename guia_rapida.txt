@@ -1,0 +1,58 @@
+AIRA LITE JUGUETE – GUÍA RÁPIDA
+-------------------------------
+
+1) Iniciar Aira
+   Ejecuta en terminal:
+       aira_juguete
+
+   Si activaste modo escucha 24/7, Aira arranca sola como servicio.
+
+2) Cómo funciona
+   - Escucha por el micrófono automáticamente.
+   - Convierte tu voz en texto con Whisper (Ollama).
+   - Procesa el mensaje con percepción, reglas, memoria y emociones.
+   - Genera una respuesta usando el modelo Mistral 7B.
+   - La reproduce con Piper TTS.
+   - Todo ocurre en local, sin nube.
+
+3) Archivos importantes
+   config.json       → configuración (idioma, modelo, integración AM, HA)
+   memoria/          → memoria corto y largo plazo
+   logs/             → registros de actividad
+   modulos/          → lógica interna de Aira Juguete
+
+4) Integración con Aira Madre
+   Si se activó en la instalación, Juguete recibirá:
+     - mejoras de estilo
+     - ajustes de reglas
+     - optimizaciones internas
+
+   No se envían datos personales ni audios.
+
+5) Integración con Home Assistant
+   Si se activó, Aira podrá:
+     - encender/apagar luces
+     - controlar dispositivos
+     - enviar órdenes a HA por LAN
+
+6) Comandos útiles
+   Reiniciar Aira:
+       systemctl restart aira_juguete
+
+   Desactivar escucha 24/7:
+       systemctl disable aira_juguete
+
+   Cambiar idioma:
+       editar config.json
+
+7) Solución de problemas
+   - Si no responde, verifica que Ollama está en ejecución:
+       systemctl status ollama
+
+   - Si no habla, revisa piper:
+       piper --help
+
+   - Si no escucha, revisa tu micrófono con:
+       ffmpeg -f alsa -i default -t 3 test.wav
+
+Listo. Aira Lite Juguete funcionando y sin depender de ninguna nube.
